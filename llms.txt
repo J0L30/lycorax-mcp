@@ -1,0 +1,32 @@
+# Lycorax MCP
+
+> Five website audit tools for AI agents, served by Apify's hosted MCP server (no self-hosting): Shopify and WooCommerce alt text fixers, a website image SEO audit, a domain RDAP/DNS/SPF/DMARC/TLS checker, and a defensive website exposure knowledge tool. Connect with one remote MCP URL and Apify OAuth or an Apify API token. Runs are billed by Apify to the user's own Apify account.
+
+MCP server URL (Streamable HTTP):
+https://mcp.apify.com/?tools=j0l30/shopify-seo-alt-text-fixer,j0l30/woocommerce-seo-alt-text-fixer,j0l30/website-image-seo-audit,j0l30/domain-rdap-dns-reputation-checker,j0l30/website-exposure-defense-knowledge
+
+Tool names use `--` in place of `/` (for example `j0l30--website-image-seo-audit`). A tool call returns run status and a `datasetId`; read results with `get-dataset-items`. Write-back to stores is off by default, defaults to a dry run, and requires the user's explicit authorisation.
+
+## Tools
+- [Shopify Alt Text Generator & Image SEO Auto-Fix](https://apify.com/j0l30/shopify-seo-alt-text-fixer): audit Shopify product image alt text and page SEO basics; optional Admin API write-back with dry run and rollback
+- [WooCommerce Alt Text Generator & Image SEO Fixer](https://apify.com/j0l30/woocommerce-seo-alt-text-fixer): same for WooCommerce and WordPress media; optional REST API write-back with dry run and rollback
+- [Image SEO Checker & Alt Text Checker for Any Website](https://apify.com/j0l30/website-image-seo-audit): crawl any site for alt text, image weight/format, width/height and lazy-loading issues; before/after proof and Cloudflare Worker fixes
+- [Domain Reputation Checker: Bulk RDAP, DMARC & DNS Lookup](https://apify.com/j0l30/domain-rdap-dns-reputation-checker): RDAP, DNS, SPF, DMARC, TLS, HTTPS and security headers for up to 1,000 domains; check, monitor and availability modes
+- [Website Exposure Defense Knowledge for AI Agents](https://apify.com/j0l30/website-exposure-defense-knowledge): defensive guidance for site owners fixing indexed .env, .git, backups and other leaks on their own sites
+
+## Docs
+- [README](https://github.com/J0L30/lycorax-mcp/blob/main/README.md): setup for Claude, Claude Code, Cursor, VS Code, Codex and ChatGPT
+- [Client configs](https://github.com/J0L30/lycorax-mcp/tree/main/configs)
+- [Apify MCP server documentation](https://docs.apify.com/platform/integrations/mcp)
+
+## Agent Skills
+- [pre-launch-site-audit](https://github.com/J0L30/lycorax-mcp/blob/main/skills/pre-launch-site-audit/SKILL.md)
+- [shopify-image-seo-fix](https://github.com/J0L30/lycorax-mcp/blob/main/skills/shopify-image-seo-fix/SKILL.md)
+- [email-deliverability-check](https://github.com/J0L30/lycorax-mcp/blob/main/skills/email-deliverability-check/SKILL.md)
+- [attack-surface-review](https://github.com/J0L30/lycorax-mcp/blob/main/skills/attack-surface-review/SKILL.md)
+- [client-audit-report](https://github.com/J0L30/lycorax-mcp/blob/main/skills/client-audit-report/SKILL.md)
+
+## Optional
+- [Domain Reputation API (OpenAPI)](https://lycorax-domain-api.j0l30.workers.dev/openapi-simple.json)
+- [Image SEO Checker API (OpenAPI)](https://lycorax-image-seo-api.j0l30.workers.dev/openapi-simple.json)
+- [Publisher on Apify](https://apify.com/j0l30)

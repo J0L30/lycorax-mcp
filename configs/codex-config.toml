@@ -1,0 +1,4 @@
+# Add to ~/.codex/config.toml (or a trusted project's .codex/config.toml)
+# Then sign in with: codex mcp login lycorax
+[mcp_servers.lycorax]
+url = "https://mcp.apify.com/?tools=j0l30/shopify-seo-alt-text-fixer,j0l30/woocommerce-seo-alt-text-fixer,j0l30/website-image-seo-audit,j0l30/domain-rdap-dns-reputation-checker,j0l30/website-exposure-defense-knowledge"
